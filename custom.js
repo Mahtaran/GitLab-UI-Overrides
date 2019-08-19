@@ -26,6 +26,6 @@ function onSelectTheme(theme) {
 function onSelectAmuzilTheme() {
 	if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", onSelectAmuzilTheme);
 	else {
-		Cookies.set("mahtaran-custom_selected_theme", "amuzil-theme"
+		Cookies.set("mahtaran-custom_selected_theme", "amuzil-theme");
 	}
 }
