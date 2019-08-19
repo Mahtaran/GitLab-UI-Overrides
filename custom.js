@@ -2,8 +2,8 @@ $(document).ready(function() {
 	var oldContent = $("title").html();
 	$("title").html(oldContent.replace(new RegExp("GitLab", "g"), "Amuzil Git"));
 	
-	$("body").removeClass();
-	$("body").addClass();
+	//$("body").removeClass();
+	//$("body").addClass();
 	
 	executeWithCookies(function() {
 		var theme = Cookies.get("mahtaran_gitlab_ui_overrides_custom_selected_theme");
