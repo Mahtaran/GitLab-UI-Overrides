@@ -15,6 +15,6 @@ $(document).ready(function() {
 });
 
 function onSelectAmuzilTheme() {
-    if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js");
-    print(Cookies.get());
+    if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", onSelectAmuzilTheme);
+    else print(Cookies.get());
 }
