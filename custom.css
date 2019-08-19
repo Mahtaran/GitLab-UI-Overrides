@@ -2,3 +2,134 @@
 	width: 24px;
 	height: 24px;
 }
+
+/* Amuzil theme */
+
+.application-theme .preview.ui-amuzil {
+    background-color: #2e2e2e
+}
+
+body.ui-amuzil .navbar-gitlab {
+    background-color: #2e2e2e
+}
+
+body.ui-amuzil .navbar-gitlab .navbar-collapse {
+    color: #dfdfdf
+}
+
+body.ui-amuzil .navbar-gitlab .container-fluid .navbar-toggler {
+    border-left: 1px solid #8a8a8a
+}
+
+body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li>a:hover, body.ui-amuzil .navbar-gitlab .participants-more .navbar-sub-nav>li>.btn-link:hover, .participants-more body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li>.btn-link:hover, body.ui-amuzil .navbar-gitlab .user-list-more .navbar-sub-nav>li>.btn-link:hover, .user-list-more body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li>.btn-link:hover, body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li>a:focus, body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li>button:hover, body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li>button:focus, body.ui-amuzil .navbar-gitlab .navbar-nav>li>a:hover, body.ui-amuzil .navbar-gitlab .participants-more .navbar-nav>li>.btn-link:hover, .participants-more body.ui-amuzil .navbar-gitlab .navbar-nav>li>.btn-link:hover, body.ui-amuzil .navbar-gitlab .user-list-more .navbar-nav>li>.btn-link:hover, .user-list-more body.ui-amuzil .navbar-gitlab .navbar-nav>li>.btn-link:hover, body.ui-amuzil .navbar-gitlab .navbar-nav>li>a:focus, body.ui-amuzil .navbar-gitlab .navbar-nav>li>button:hover, body.ui-amuzil .navbar-gitlab .navbar-nav>li>button:focus {
+    background-color: rgba(223, 223, 223, 0.2)
+}
+
+body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li.active>a, body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li.active>button, body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li.dropdown.show>a, body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li.dropdown.show>button, body.ui-amuzil .navbar-gitlab .navbar-nav>li.active>a, body.ui-amuzil .navbar-gitlab .navbar-nav>li.active>button, body.ui-amuzil .navbar-gitlab .navbar-nav>li.dropdown.show>a, body.ui-amuzil .navbar-gitlab .navbar-nav>li.dropdown.show>button {
+    color: #2e2e2e;
+    background-color: #fff
+}
+
+body.ui-amuzil .navbar-gitlab .navbar-sub-nav>li.line-separator, body.ui-amuzil .navbar-gitlab .navbar-nav>li.line-separator {
+    border-left: 1px solid rgba(223, 223, 223, 0.2)
+}
+
+body.ui-amuzil .navbar-gitlab .navbar-sub-nav {
+    color: #dfdfdf
+}
+
+body.ui-amuzil .navbar-gitlab .nav>li {
+    color: #dfdfdf
+}
+
+body.ui-amuzil .navbar-gitlab .nav>li>a.header-user-dropdown-toggle .header-user-avatar {
+    border-color: #dfdfdf
+}
+
+@media (min-width: 576px) {
+    body.ui-amuzil .navbar-gitlab .nav>li>a:hover, body.ui-amuzil .navbar-gitlab .participants-more .nav>li>.btn-link:hover, .participants-more body.ui-amuzil .navbar-gitlab .nav>li>.btn-link:hover, body.ui-amuzil .navbar-gitlab .user-list-more .nav>li>.btn-link:hover, .user-list-more body.ui-amuzil .navbar-gitlab .nav>li>.btn-link:hover, body.ui-amuzil .navbar-gitlab .nav>li>a:focus {
+        background-color: rgba(223, 223, 223, 0.2)
+    }
+}
+
+body.ui-amuzil .navbar-gitlab .nav>li>a:hover svg, body.ui-amuzil .navbar-gitlab .participants-more .nav>li>.btn-link:hover svg, .participants-more body.ui-amuzil .navbar-gitlab .nav>li>.btn-link:hover svg, body.ui-amuzil .navbar-gitlab .user-list-more .nav>li>.btn-link:hover svg, .user-list-more body.ui-amuzil .navbar-gitlab .nav>li>.btn-link:hover svg, body.ui-amuzil .navbar-gitlab .nav>li>a:focus svg {
+    fill: currentColor
+}
+
+body.ui-amuzil .navbar-gitlab .nav>li.active>a, body.ui-amuzil .navbar-gitlab .nav>li.dropdown.show>a {
+    color: #2e2e2e;
+    background-color: #fff
+}
+
+body.ui-amuzil .navbar-gitlab .nav>li.active>a:hover svg, body.ui-amuzil .navbar-gitlab .participants-more .nav>li.active>.btn-link:hover svg, .participants-more body.ui-amuzil .navbar-gitlab .nav>li.active>.btn-link:hover svg, body.ui-amuzil .navbar-gitlab .user-list-more .nav>li.active>.btn-link:hover svg, .user-list-more body.ui-amuzil .navbar-gitlab .nav>li.active>.btn-link:hover svg, body.ui-amuzil .navbar-gitlab .nav>li.dropdown.show>a:hover svg, body.ui-amuzil .navbar-gitlab .participants-more .nav>li.dropdown.show>.btn-link:hover svg, .participants-more body.ui-amuzil .navbar-gitlab .nav>li.dropdown.show>.btn-link:hover svg, body.ui-amuzil .navbar-gitlab .user-list-more .nav>li.dropdown.show>.btn-link:hover svg, .user-list-more body.ui-amuzil .navbar-gitlab .nav>li.dropdown.show>.btn-link:hover svg {
+    fill: #2e2e2e
+}
+
+body.ui-amuzil .navbar-gitlab .nav>li .impersonated-user svg, body.ui-amuzil .navbar-gitlab .nav>li .impersonated-user:hover svg {
+    fill: #2e2e2e
+}
+
+body.ui-amuzil .navbar .title>a:hover, body.ui-amuzil .navbar .participants-more .title>.btn-link:hover, .participants-more body.ui-amuzil .navbar .title>.btn-link:hover, body.ui-amuzil .navbar .user-list-more .title>.btn-link:hover, .user-list-more body.ui-amuzil .navbar .title>.btn-link:hover, body.ui-amuzil .navbar .title>a:focus {
+    background-color: rgba(223, 223, 223, 0.2)
+}
+
+body.ui-amuzil .search form {
+    background-color: rgba(223, 223, 223, 0.2)
+}
+
+body.ui-amuzil .search form:hover {
+    background-color: rgba(223, 223, 223, 0.3)
+}
+
+body.ui-amuzil .search .search-input::placeholder {
+    color: rgba(223, 223, 223, 0.8)
+}
+
+body.ui-amuzil .search .search-input-wrap .search-icon, body.ui-amuzil .search .search-input-wrap .clear-icon {
+    fill: rgba(223, 223, 223, 0.8)
+}
+
+body.ui-amuzil .search.search-active form {
+    background-color: #fff
+}
+
+body.ui-amuzil .search.search-active .search-input-wrap .search-icon {
+    fill: rgba(223, 223, 223, 0.8)
+}
+
+body.ui-amuzil .nav-sidebar li.active {
+    box-shadow: inset 4px 0 0 #707070
+}
+
+body.ui-amuzil .nav-sidebar li.active>a {
+    color: #4f4f4f
+}
+
+body.ui-amuzil .nav-sidebar li.active svg {
+    fill: #4f4f4f
+}
+
+body.ui-amuzil .sidebar-top-level-items>li.active .badge.badge-pill, body.ui-amuzil .sidebar-top-level-items>li.active .shortcut-mappings .key, .shortcut-mappings body.ui-amuzil .sidebar-top-level-items>li.active .key {
+    color: #4f4f4f
+}
+
+body.ui-amuzil .nav-links li.active a, body.ui-amuzil .nav-links li.md-header-tab.active button, body.ui-amuzil .nav-links li a.active {
+    border-bottom: 2px solid #a7a7a7
+}
+
+body.ui-amuzil .nav-links li.active a .badge.badge-pill, body.ui-amuzil .nav-links li.active a .shortcut-mappings .key, .shortcut-mappings body.ui-amuzil .nav-links li.active a .key, body.ui-amuzil .nav-links li.md-header-tab.active button .badge.badge-pill, body.ui-amuzil .nav-links li.md-header-tab.active button .shortcut-mappings .key, .shortcut-mappings body.ui-amuzil .nav-links li.md-header-tab.active button .key, body.ui-amuzil .nav-links li a.active .badge.badge-pill, body.ui-amuzil .nav-links li a.active .shortcut-mappings .key, .shortcut-mappings body.ui-amuzil .nav-links li a.active .key {
+    font-weight: 600
+}
+
+body.ui-amuzil .branch-header-title {
+    color: #707070
+}
+
+body.ui-amuzil .ide-sidebar-link.active {
+    color: #707070;
+    box-shadow: inset 3px 0 #707070
+}
+
+body.ui-amuzil .ide-sidebar-link.active.is-right {
+    box-shadow: inset -3px 0 #707070
+}
