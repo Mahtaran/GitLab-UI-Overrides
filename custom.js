@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $(".page-wrap .navbar .container .mx-auto img").attr({
-        style: "width: 24px; height: 24px;"
-    });
+    var oldContent = $("title").html();
+    $("title").html(oldContent.replace(new RegExp("GitLab", "g"), "Amuzil Git");
 });
