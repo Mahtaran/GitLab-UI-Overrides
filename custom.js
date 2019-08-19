@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$("body").removeClass();
 	$("body").addClass();
 	
-	executeWithCookes(function() {
+	executeWithCookies(function() {
 		var theme = Cookies.get("mahtaran_gitlab_ui_overrides_custom_selected_theme");
 		if (theme !== undefined) {
 			$(".col-lg-8.application-theme").find("label").forEach(function() {
