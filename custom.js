@@ -20,7 +20,14 @@ $(document).ready(function() {
 });
 
 function onSelectTheme(theme) {
-	console.log(theme);	
+	console.log(theme);
+	$(".col-lg-8.application-theme").find("label").forEach(function() {
+		if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
+			$(this).find("input")..prop("checked", true);
+		} else {
+			$(this).find("input")..prop("checked", false);	
+		}
+	});
 }
 
 function onSelectAmuzilTheme() {
