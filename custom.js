@@ -8,15 +8,30 @@ $(document).ready(function() {
 	executeWithCookies(function() {
 		var theme = Cookies.get("mahtaran_gitlab_ui_overrides_custom_selected_theme");
 		if (theme !== undefined) {
-			$(".col-lg-8.application-theme").find("label").each(function() {
-				if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
+			var classes = $("body").attr("class").split(/\s+/);
+			var elements = $(".col-lg-8.application-theme").find("label");
+			var availableThemes = new Array(elements.length);
+			var newTheme = "ui-amuzil";
+			
+			elements.each(function() {
+				var elementTheme = $(this).find("div").attr("class").split(/\s+/)[1];
+				availableThemes.push(elementTheme);
+				if (elementTheme === theme) {
 					$(this).find("input").prop("checked", true);
+					newTheme = elementTheme;
 				} else {
 					$(this).find("input").prop("checked", false);	
 				}
 			});
+			
+			var newClasses = classes.filter(class => !availableThemes.includes(class));
+			newClasses.push(newTheme);
+			
+			console.log(classes);
+			console.log(newClasses);
+			
+			$("body").attr("class", newClasses.join(" "));
 		}
-		console.log("YUS: " + theme);	
 	});
 	
 	$(".col-lg-8.application-theme").append(`
@@ -49,11 +64,4 @@ function onSelectTheme(theme) {
 function executeWithCookies(callback) {
 	if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", callback);
 	else callback();
-}
-
-function onSelectAmuzilTheme() {
-	if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", onSelectAmuzilTheme);
-	else {
-		Cookies.set("mahtaran-custom_selected_theme", "amuzil-theme");
-	}
 }
