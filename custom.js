@@ -4,10 +4,11 @@ $(document).ready(function() {
     $("body").removeClass();
     $("body").addClass();
     
+    print($(".col-lg-8.application-theme").html());
     $(".col-lg-8.application-theme").append(`
 <label>
     <div class="preview ui-amuzil"></div>
-    <input type="radio" onclick="onSelectAmuzilTheme">
+    <input type="radio" value="11" name="user[theme_id]" id="user_theme_id_11" onclick="onSelectAmuzilTheme">
     Amuzil
 </label>
     `);
