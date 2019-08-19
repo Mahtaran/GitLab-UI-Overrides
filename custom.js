@@ -39,7 +39,7 @@ function addTheme(theme) {
 </label>
 	`);
 	
-	THEMES.push(theme_identfier);
+	THEMES.push(theme_identifier);
 }
 
 function setTheme(theme) {
