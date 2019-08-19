@@ -24,7 +24,7 @@ $(document).ready(function() {
 				}
 			});
 			
-			var newClasses = classes.filter(class => !availableThemes.includes(class));
+			var newClasses = classes.filter(clazz => !availableThemes.includes(clazz));
 			newClasses.push(newTheme);
 			
 			console.log(classes);
