@@ -8,13 +8,14 @@ $(document).ready(function() {
     $(".col-lg-8.application-theme").append(`
 <label>
     <div class="preview ui-amuzil"></div>
-    <input type="radio" value="11" name="user[theme_id]" id="user_theme_id_11" onclick="onSelectAmuzilTheme">
+    <input type="radio" value="11" name="user[theme_id]" id="user_theme_id_11" onclick="onSelectAmuzilTheme()">
     Amuzil
 </label>
     `);
 });
 
 function onSelectAmuzilTheme() {
+    print("CLICK");
     if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", onSelectAmuzilTheme);
     else print(Cookies.get());
 }
