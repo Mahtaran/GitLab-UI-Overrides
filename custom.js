@@ -13,7 +13,7 @@ $(document).ready(function() {
 	`);
 	
 	$(".col-lg-8.application-theme").on("click", "label", function(event) {
-		var theme = $(this).find("div").attr("class").split(/\s+/)[1]);
+		var theme = $(this).find("div").attr("class").split(/\s+/)[1];
 		onSelectTheme(theme);
 		event.preventDefault();
 	});
