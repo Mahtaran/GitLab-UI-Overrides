@@ -4,18 +4,27 @@ $(document).ready(function() {
     $("body").removeClass();
     $("body").addClass();
     
-    console.log($(".col-lg-8.application-theme").html());
     $(".col-lg-8.application-theme").append(`
 <label>
     <div class="preview ui-amuzil"></div>
-    <input type="radio" value="11" name="user[theme_id]" id="user_theme_id_11" onclick="onSelectAmuzilTheme()">
+    <input type="radio" value="11" name="user[theme_id]" id="user_theme_id_11">
     Amuzil
 </label>
     `);
+    
+    $(".col-lg-8.application-theme").on("click", "label", function(event) {
+		onSelectTheme($(this).find("div").attr("class").split(/\s+/)[1]);
+		event.preventDefault();
+    });
 });
 
+function onSelectTheme(theme) {
+	console.log(theme);	
+}
+
 function onSelectAmuzilTheme() {
-    console.log("CLICK");
     if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", onSelectAmuzilTheme);
-    else console.log(Cookies.get());
+    else {
+        Cookies.set("mahtaran-custom_selected_theme", "amuzil-theme"
+    }
 }
