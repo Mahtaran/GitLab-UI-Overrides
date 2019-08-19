@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("body").removeClass();
     $("body").addClass();
     
-    print($(".col-lg-8.application-theme").html());
+    console.log($(".col-lg-8.application-theme").html());
     $(".col-lg-8.application-theme").append(`
 <label>
     <div class="preview ui-amuzil"></div>
@@ -15,7 +15,7 @@ $(document).ready(function() {
 });
 
 function onSelectAmuzilTheme() {
-    print("CLICK");
+    console.log("CLICK");
     if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", onSelectAmuzilTheme);
-    else print(Cookies.get());
+    else console.log(Cookies.get());
 }
