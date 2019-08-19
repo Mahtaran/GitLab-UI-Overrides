@@ -8,7 +8,7 @@ $(document).ready(function() {
 	executeWithCookies(function() {
 		var theme = Cookies.get("mahtaran_gitlab_ui_overrides_custom_selected_theme");
 		if (theme !== undefined) {
-			$(".col-lg-8.application-theme").find("label").forEach(function() {
+			$(".col-lg-8.application-theme").find("label").each(function() {
 				if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
 					$(this).find("input").prop("checked", true);
 				} else {
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
 function onSelectTheme(theme) {
 	console.log(theme);
-	$(".col-lg-8.application-theme").find("label").forEach(function() {
+	$(".col-lg-8.application-theme").find("label").each(function() {
 		if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
 			$(this).find("input").prop("checked", true);
 			Cookies.set("mahtaran_gitlab_ui_overrides_custom_selected_theme", theme);
