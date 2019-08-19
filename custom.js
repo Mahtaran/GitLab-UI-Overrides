@@ -6,9 +6,17 @@ $(document).ready(function() {
 	$("body").addClass();
 	
 	executeWithCookes(function() {
-		if (Cookies.get("custom_selected_theme") !== undefined) {
-			console.log("YUS");	
+		var theme = Cookies.get("mahtaran_gitlab_ui_overrides_custom_selected_theme");
+		if (theme !== undefined) {
+			$(".col-lg-8.application-theme").find("label").forEach(function() {
+				if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
+					$(this).find("input").prop("checked", true);
+				} else {
+					$(this).find("input").prop("checked", false);	
+				}
+			});
 		}
+		console.log("YUS: " + theme);	
 	});
 	
 	$(".col-lg-8.application-theme").append(`
@@ -31,6 +39,7 @@ function onSelectTheme(theme) {
 	$(".col-lg-8.application-theme").find("label").forEach(function() {
 		if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
 			$(this).find("input").prop("checked", true);
+			Cookies.set("mahtaran_gitlab_ui_overrides_custom_selected_theme", theme);
 		} else {
 			$(this).find("input").prop("checked", false);	
 		}
