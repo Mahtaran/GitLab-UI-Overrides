@@ -19,7 +19,7 @@ $(document).ready(function() {
 	addTheme("Amuzil");
 	
 	$(".col-lg-8.application-theme").on("click", "label", function(event) {
-		setTheme($(this).find("div").attr("class").split(/\s+/)[1]);
+		$(this).find("div").attr("class").trim().split(/\s+/).filter(element => THEMES.includes(element)).forEach(setTheme);
 		event.preventDefault();
 	});
 	
@@ -49,7 +49,7 @@ function setTheme(theme) {
 		
 		if (typeof theme === "undefined") return;
 		
-		const classes = $("body").attr("class").split(/\s+/);
+		const classes = $("body").attr("class").trim().split(/\s+/);
 		
 		// Only used on the preferences page
 		$(".col-lg-8.application-theme").find("label").each(function() {
