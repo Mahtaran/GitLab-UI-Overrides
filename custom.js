@@ -1,8 +1,15 @@
 $(document).ready(function() {
 	var oldContent = $("title").html();
 	$("title").html(oldContent.replace(new RegExp("GitLab", "g"), "Amuzil Git"));
+	
 	$("body").removeClass();
 	$("body").addClass();
+	
+	executeWithCookes(function() {
+		if (Cookies.get("custom_selected_theme") !== undefined) {
+			console.log("YUS");	
+		}
+	});
 	
 	$(".col-lg-8.application-theme").append(`
 <label>
@@ -23,11 +30,16 @@ function onSelectTheme(theme) {
 	console.log(theme);
 	$(".col-lg-8.application-theme").find("label").forEach(function() {
 		if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
-			$(this).find("input")..prop("checked", true);
+			$(this).find("input").prop("checked", true);
 		} else {
-			$(this).find("input")..prop("checked", false);	
+			$(this).find("input").prop("checked", false);	
 		}
 	});
+}
+
+function executeWithCookies(callback) {
+	if (typeof Cookies === "undefined") $.getScript("https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js", callback);
+	else callback();
 }
 
 function onSelectAmuzilTheme() {
