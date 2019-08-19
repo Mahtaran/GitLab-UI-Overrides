@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("body").removeClass();
     $("body").addClass();
     
-    $("col-lg-8 application-theme").append(`
+    $(".col-lg-8.application-theme").append(`
 <label>
     <div class="preview ui-amuzil"></div>
     <input type="radio" onclick="onSelectAmuzilTheme">
