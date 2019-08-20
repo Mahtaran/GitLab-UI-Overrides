@@ -49,8 +49,10 @@ function addTheme(theme) {
 function setTheme(theme) {
 	executeWithCookies(function() {
 		if (typeof theme === "undefined") theme = Cookies.get(COOKIE_CUSTOM_SELECTED_THEME);
-		else Cookies.set(COOKIE_CUSTOM_SELECTED_THEME, theme);
+		// If still undefined, set to default.
 		if (typeof theme === "undefined") theme = "ui-amuzil";
+		
+		Cookies.set(COOKIE_CUSTOM_SELECTED_THEME, theme);
 		
 		const classes = $("body").attr("class").trim().split(/\s+/);
 		
