@@ -3,6 +3,10 @@ function executeWithCookies(callback) {
 	else callback();
 }
 
+function getTheme(label) {
+	return label.find("div").attr("class").trim().split(/\s+/).filter(element => THEMES.includes(element))[0];
+}
+
 const COOKIE_PREFIX = "mahtaran_gitlab_ui_overrides_";
 const COOKIE_CUSTOM_SELECTED_THEME = COOKIE_PREFIX + "custom_selected_theme";
 
@@ -19,7 +23,7 @@ $(document).ready(function() {
 	addTheme("Amuzil");
 	
 	$(".col-lg-8.application-theme").on("click", "label", function(event) {
-		$(this).find("div").attr("class").trim().split(/\s+/).filter(element => THEMES.includes(element)).forEach(setTheme);
+		setTheme(getTheme($(this)));
 		event.preventDefault();
 	});
 	
@@ -53,7 +57,7 @@ function setTheme(theme) {
 		
 		// Only used on the preferences page
 		$(".col-lg-8.application-theme").find("label").each(function() {
-			if ($(this).find("div").attr("class").split(/\s+/)[1] === theme) {
+			if (getTheme($(this)) === theme) {
 				$(this).find("input").prop("checked", true);
 			} else {
 				$(this).find("input").prop("checked", false);	
