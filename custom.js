@@ -69,8 +69,8 @@ function setTheme(theme) {
 		newClasses.push(theme);
 		
 		// Debugging
-		console.log(classes);
-		console.log(newClasses);
+		//console.log(classes);
+		//console.log(newClasses);
 		
 		$("body").attr("class", newClasses.join(" "));
 	});
