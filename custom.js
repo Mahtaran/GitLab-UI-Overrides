@@ -54,7 +54,8 @@ function setTheme(theme) {
 		
 		Cookies.set(COOKIE_CUSTOM_SELECTED_THEME, theme);
 		
-		const classes = $("body").attr("class").trim().split(/\s+/);
+		const classes = $("body").attr("class")?.trim().split(/\s+/);
+		if (typeof classes === "undefined") return;
 		
 		// Only used on the preferences page
 		$(".col-lg-8.application-theme").find("label").each(function() {
